@@ -9,10 +9,9 @@ import org.joda.time.DateTime
 
 fun main() {
     Database.connect(
-        url = "jdbc:mysql://127.0.0.1:8889/todo_api?useUnicode=true&characterEncoding=utf-8&useSSL=false",
-        driver = "com.mysql.jdbc.Driver",
-        user = "root",
-        password = "root"
+        //url = "jdbc:h2:~/test;DB_CLOSE_DELAY=-1",
+        url = "jdbc:h2:mem:todo_api;DB_CLOSE_DELAY=-1",
+        driver = "org.h2.Driver"
     )
 
     transaction {
